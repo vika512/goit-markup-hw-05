@@ -42,7 +42,7 @@
         <section class="hero">
             <div class="container container-header">
                 <h1 class="hero-title">Effective Solutions for Your Business</h1>
-                <button class="hero-btn btn" type="button">Order Service</button>
+                <button class="hero-btn btn" type="button" data-modal-open>Order Service</button>
             </div>
         </section>
 
@@ -332,14 +332,17 @@
 
     <!-- Modal window -->
 
-    <div class="modal-background">
+    <div class="modal-background is-hidden" data-modal>
         <div class="modal-window">
-            <button class="modal-button" type="button">
+            <button class="modal-button" type="button" data-modal-close>
                 <svg class="modal-image" width="8px" height="8px">
                     <use href="./images/icons.svg#icon-closebutton"></use>
                 </svg>
             </button>
         </div>
     </div>
+    <!-- ===== JS Modal ========= -->
+
+    <script src="./js/modal.js"></script>
 </body>
 </html>
