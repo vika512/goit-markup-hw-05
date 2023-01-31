@@ -631,6 +631,20 @@ body {
     color: var(--secondary-text-color);
 }
 
+.card-overlay {
+    position: relative;
+}
+
+.card-text {
+    position: absolute;
+    width: 296px;
+
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--light-background-color);
+}
+
 /* ====== Modal window ========= */
 
 .modal-background {
@@ -657,13 +671,16 @@ body {
 }
 
 .modal-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 24px;
     height: 24px;
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    /* background-color: #E7E9FC; */
+    background-color: #E7E9FC;
 }
 
 .modal-image {
-    fill: #000;
+    stroke: #000;
 }
