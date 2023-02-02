@@ -626,10 +626,8 @@ body {
     margin-bottom: 48px;
 }
 
-.work-item {
-}
-
 .work-link {
+    display: block;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
@@ -672,14 +670,14 @@ body {
     transition: transform 900ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.card-overlay:hover .card-text  {
-    opacity: 1;
-    transition: opacity 800ms;
-}
-
-.card-overlay:hover::before{
+.work-link:is(:hover, :focus) .card-overlay::before {
     transform: translateY(0);
     opacity: 1;
+}
+
+.work-link:is(:hover, :focus) .card-text {
+    opacity: 1;
+    transition: transform 800ms, opacity 800ms;
 }
 
 .card-text {
@@ -687,8 +685,10 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
     width: 296px;
     opacity: 0;
+
 
     font-size: 16px;
     line-height: 1.5;
